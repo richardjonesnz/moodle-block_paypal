@@ -83,14 +83,8 @@ class block_cart_renderer extends plugin_renderer_base {
             // Add this item to the current cart
 		    // $DB->update_record($block_cart_current,$item->id, $USER->id);		    
          // }
-        if (class_exists('item_list_form_button')) {
-            echo 'here';
-            $button_form = new item_list_form_button();
+            $button_form = new \block_cart\forms\item_list_form_button();
             $button_form->display();
-        } else {
-            echo 'class not found';
-        }
-        
     }
     echo html_writer::end_div(); 
     echo html_writer::end_div(); 
