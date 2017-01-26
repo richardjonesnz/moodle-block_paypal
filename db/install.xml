@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/cart/db" VERSION="20170113" COMMENT="XMLDB file for Moodle blocks/cart"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_cart_items" COMMENT="cart_items table retrofitted from MySQL">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="autoincrement"/>
+        <FIELD NAME="code" TYPE="char" LENGTH="4" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="title" TYPE="char" LENGTH="40" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="image" TYPE="char" LENGTH="200" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="price" TYPE="float" LENGTH="12" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="code" TYPE="unique" FIELDS="code"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="title" UNIQUE="false" FIELDS="title"/>  
+      </INDEXES>
+    </TABLE>
+      <TABLE NAME="block_cart_current" COMMENT="List of item codes and quantities currently held">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="autoincrement"/>
+        <FIELD NAME="item_code" TYPE="char" LENGTH="4" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="quantity" TYPE="int" LENGTH="2" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="item_code" TYPE="foreign" FIELDS="item_code" REFTABLE="block_cart_items" REFFIELDS="code"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

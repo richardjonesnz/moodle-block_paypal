@@ -17,14 +17,14 @@
 /**
  * Version details
  *
- * @package    block_superiframe
+ * @package    block_cart
  * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2016041800;        // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2012112900;        // Requires this Moodle version
-$plugin->component = 'block_superiframe'; // Full name of the plugin (used for diagnostics)
+$plugin->version   = 2016120603;        // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires  = 2016120501;        // Requires this Moodle version
+$plugin->component = 'block_cart'; // Full name of the plugin (used for diagnostics)
 $plugin->cron = 300;

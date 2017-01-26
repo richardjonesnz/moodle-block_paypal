@@ -5,19 +5,19 @@ this block template code.
 
 * Unzip the archive and read this file
 
-* Rename the superiframe/ folder to the name of your module (eg "widget").
+* Rename the cart/ folder to the name of your module (eg "widget").
 The module folder MUST be lower case. You should check the Moodle Plugins
 Database at https://moodle.org/plugins to make sure that
 your name is not already used by an other block. Registering the plugin
 name @ http://moodle.org/plugins will secure it for you.
 
 * Edit all the files in this directory and its subdirectories and change
-all the instances of the string "superiframe" to your module name
+all the instances of the string "cart" to your module name
 (eg "widget"). If you are using Linux, you can use the following command
-$ find . -type f -exec sed -i 's/superiframe/widget/g' {} \;
+$ find . -type f -exec sed -i 's/cart/widget/g' {} \;
 
-* Rename the file lang/en/superiframe.php to lang/en/widget.php
-where "widget" is the name of your module. Also rename block_superiframe.php
+* Rename the file lang/en/cart.php to lang/en/widget.php
+where "widget" is the name of your module. Also rename block_cart.php
 in the main directory to block_widget.php
 
 * Place the widget folder into the /block folder of the moodle
@@ -34,7 +34,7 @@ and modify the module's tables.
 the module's tables successfully created
 
 * Go to Site Administration > Plugins > Blocks > Manage blocks
-and you should find that this superiframe has been added to the list of
+and you should find that this cart has been added to the list of
 installed modules.
 
 * You may now proceed to run your own code in an attempt to develop

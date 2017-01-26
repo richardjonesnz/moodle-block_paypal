@@ -17,7 +17,7 @@
 /**
  * Newblock block caps.
  *
- * @package   block_superiframe
+ * @package   block_cart
  * @copyright Daniel Neis <danielneis@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'block/superiframe:myaddinstance' => array(
+    'block/cart:myaddinstance' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => array(
@@ -36,7 +36,7 @@ $capabilities = array(
         'clonepermissionsfrom' => 'moodle/my:manageblocks'
     ),
 
-    'block/superiframe:addinstance' => array(
+    'block/cart:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
 
         'captype' => 'write',
@@ -44,6 +44,18 @@ $capabilities = array(
         'archetypes' => array(
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW
+        ),
+
+        'clonepermissionsfrom' => 'moodle/site:manageblocks'
+    ),
+    // Define new capability seeuserdetail
+    'block/cart:seeuserdetail' => array(
+        'riskbitmask' => RISK_PERSONAL,
+
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'manager' => CAP_ALLOW  // Managers only can see user detail in this block
         ),
 
         'clonepermissionsfrom' => 'moodle/site:manageblocks'

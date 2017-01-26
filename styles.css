@@ -1,0 +1,31 @@
+/* Super iframe block styles*/
+
+/* Links */
+
+.block_cart_sizes a {
+   padding: 5px;	
+}
+.block_cart_sizes a:link{
+    background:#FF6;    	
+}
+.block_cart_sizes a:hover{
+    background:#F63;    	
+}
+.block_cart_heading {
+    padding: 5px;
+}
+.block_cart_cart {
+    padding: 5px;
+}
+.block_cart_item {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #DDD;
+}
+.block_cart_item ul {
+  list-style-type: none;  
+}
+.block_cart_item li {
+
+}

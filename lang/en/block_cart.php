@@ -16,31 +16,27 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_superiframe', language 'en'
+ * Strings for component 'block_cart', language 'en'
  *
- * @package   block_superiframe
+ * @package   block_cart
  * @copyright Daniel Neis <danielneis@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['blockstring'] = 'Block string';
-$string['descconfig'] = 'Description of the config section';
-$string['descfoo'] = 'Config description';
 $string['headerconfig'] = 'Config section header';
-$string['labelfoo'] = 'Config label';
-$string['superiframe:addinstance'] = 'Add a super iFrame block';
-$string['superiframe:myaddinstance'] = 'Add a super iFrame block to my moodle';
-$string['pluginname'] = 'superiframe';
-$string['welcome_user'] = 'Welcome to superiframe, {$a->firstname} {$a->lastname}';
-$string['gotosuperiframe'] = 'Click this link to view';
-$string['headerconfig'] = 'Super iFrame';
+$string['cart:addinstance'] = 'Add a super iFrame block';
+$string['cart:myaddinstance'] = 'Add a super iFrame block to my moodle';
+$string['pluginname'] = 'cart';
+$string['welcome_user'] = 'Welcome to cart, {$a->firstname} {$a->lastname}';
+$string['gotocart'] = 'View items';
+$string['gotoitem_manager'] = 'Update items table';
+$string['headerconfig'] = 'Shopping cart';
 $string['desconfig'] = 'Configuration';
-$string['url'] = 'Enter URL';
-$string['url_details'] = 'URL description';
-$string['width'] = 'Block width';
-$string['width_details'] = 'width in px';
-$string['height'] = 'Block height';
-$string['height_details'] = 'height in px';
-$string['pagelayout'] = 'Page layout';
-$string['pagelayout_details'] = 'Set the page layout';
-
+$string['email'] = 'Paypal Email';
+$string['email_details'] = 'Enter Paypal Business email address';
+$string['noemail'] = 'No Paypal email address configured';
+$string['sale_items'] = 'The following items are in the database';
+$string['cart_name'] = 'Available items';
+$string['cart_description'] = 'Select items to add to your cart';
+$string['addtocart'] = 'Add to cart';
