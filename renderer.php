@@ -24,8 +24,7 @@ class block_cart_renderer extends plugin_renderer_base {
   }
 
   // Here we aggregate all the pieces of content of the view page and displays them
-  // The passed in parameters originate in the admin config settings for the block
-  
+  // The passed in parameters originate in the admin config settings for the block  
     function display_view_page($blockid){
     global $USER, $DB;
     
@@ -78,16 +77,20 @@ class block_cart_renderer extends plugin_renderer_base {
         echo $oneitem;
         echo html_writer::end_div();
         // an add button for each item
-        if (class_exists('block_cart_item_list_form_button')) {
-          $mform = new block_cart_item_list_form_button();
+        // $mform = new \block_cart\forms\item_list_form_button();
           // add the item to the current cart table
-          if ($data = $mform->get_data()) {
+          // if ($mform->get_data()) {
             // Add this item to the current cart
 		    // $DB->update_record($block_cart_current,$item->id, $USER->id);		    
-          }
+         // }
+        if (class_exists('item_list_form_button')) {
+            echo 'here';
+            $button_form = new item_list_form_button();
+            $button_form->display();
         } else {
-              echo 'coding error';
+            echo 'class not found';
         }
+        
     }
     echo html_writer::end_div(); 
     echo html_writer::end_div(); 
@@ -96,7 +99,7 @@ class block_cart_renderer extends plugin_renderer_base {
     echo $this->output->footer();
   }
 
-    
+    // This function display data from the table for editing
     function display_items_table($blockid) {
     
     global $DB;
